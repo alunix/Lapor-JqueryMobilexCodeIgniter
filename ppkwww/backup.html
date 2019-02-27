@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lapor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" href="css/page1.css">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="ListBerita">
+        <div data-role="header">
+            <h1>List Laporan</h1>
+            <a href="" data-icon="plus" class="ui-btn-right" id="btn_add">Add</a>
+        </div>
+        <div role="main" class="ui-content" id="list-berita">
+            <!-- <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Kobarkan Semangat</h3>
+                <p>12-12-2012|23:50</p>
+                <hr />
+                <p>Oleh <a href="#">Feri Setyo Efendi</a></p>
+                <p>aaaa aaaa aaa aaa aaa aaaaa aaaaaa aaaaaa aaaaa aaaa aaaaa</p>
+            </div>
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Kobarkan Semangat</h3>
+                <p>12-12-2012|23:50</p>
+                <hr />
+                <p>Oleh <a href="#">Feri Setyo Efendi</a></p>
+                <p>aaaa aaaa aaa aaa aaa aaaaa aaaaaa aaaaaa aaaaa aaaa aaaaa</p>
+            </div> -->
+        </div>
+    </div>
+
+    <div data-role="page" id="FormLaporan">
+        <div data-role="header">
+            <h1>New Laporan</h1>
+        </div>
+        <div role="main" class="ui-content" id="list-berita">
+            <form method="post" id="formdt">
+              <label for="judul_in">Judul:</label>
+              <input type="text" name="judul_in" id="judul_in" value="">
+              <label for="kategori_in" class="select">Kategori:</label>
+              <select name="kategori_in" id="kategori_in" data-mini="true" data-inline="true">
+                  <option value="kecelakaan">kecelakaan</option>
+                  <option value="kriminal">kriminal</option>
+                  <option value="bencana alam">bencana alam</option>
+              </select>
+              <label for="keterangan_in">Keterangan:</label>
+              <textarea cols="40" rows="8" name="keterangan_in" id="keterangan_in"></textarea>
+              <label for="lampiran_in">lampiran: (foto)</label>
+              <input type="file" name="lampiran_in" id="lampiran_in" value="">
+              <label for="nama_in">Nama:</label>
+              <input type="text" name="nama_in" id="nama_in" value="">
+              <label for="nohp_author_in">No Hp:</label>
+              <input type="tel" name="nohp_author_in" id="nohp_author_in" value="">
+              <button type="submit" class="ui-shadow ui-btn ui-corner-all" id="submit">Button element</button>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="page" id="Result">
+        <div data-role="header">
+            <h1>Create Result</h1>
+        </div>
+        <div role="main" class="ui-content" id="isi_result">
+            <!-- <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Kobarkan Semangat</h3>
+                <p>12-12-2012|23:50</p>
+                <hr />
+                <p>Oleh <a href="#">Feri Setyo Efendi</a></p>
+                <p>aaaa aaaa aaa aaa aaa aaaaa aaaaaa aaaaaa aaaaa aaaa aaaaa</p>
+            </div>
+            <div class="ui-body ui-body-a ui-corner-all">
+                <h3>Kobarkan Semangat</h3>
+                <p>12-12-2012|23:50</p>
+                <hr />
+                <p>Oleh <a href="#">Feri Setyo Efendi</a></p>
+                <p>aaaa aaaa aaa aaa aaa aaaaa aaaaaa aaaaaa aaaaa aaaa aaaaa</p>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="scripts/App.js"></script>
+    <script>Application.initApplication();</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lapor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" href="css/page1.css">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="ListLaporan" class="ui-page-active">
+        <div data-role="header">
+            <h1>List Laporan</h1>
+            <a href="" data-icon="plus" class="ui-btn-right" id="btn_add">Add</a>
+        </div>
+        <div role="content" class="ui-content">
+          <form class="ui-filterable">
+              <input data-type="search" placeholder="Search..." id="searchlaporan">
+          </form>
+          <hr>
+          <form>
+            <fieldset data-role="controlgroup" data-type="horizontal" id="select_kategori">
+                <legend>Kategori:</legend>
+                <input type="radio" name="kategori_radio" id="radio-choice-h-2a" value="off" checked="checked">
+                <label class="fontku" for="radio-choice-h-2a">Off</label>
+                <input type="radio" name="kategori_radio" id="radio-choice-h-2b" value="kecelakaan">
+                <label class="fontku" for="radio-choice-h-2b">Kecelakaan</label>
+                <input type="radio" name="kategori_radio" id="radio-choice-h-2c" value="kriminal">
+                <label class="fontku" for="radio-choice-h-2c">Kriminal</label>
+                <input type="radio" name="kategori_radio" id="radio-choice-h-2d" value="bencana alam">
+                <label class="fontku" for="radio-choice-h-2d">Bencana Alam</label>
+              </fieldset>
+            </form>
+            <hr>
+          <ul id="list-laporan" data-role="listview" data-inset="true" data-filter="true" data-input="#searchlaporan">
+
+          </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="FormLaporan">
+        <div data-role="header">
+            <h1>New Laporan</h1>
+        </div>
+        <div role="content" class="ui-content">
+            <form method="post" id="formdt" action="#result1">
+              <label for="judul_in">Judul:</label>
+              <input type="text" name="judul_in" id="judul_in" value="">
+              <label for="kategori_in" class="select">Kategori:</label>
+              <select name="kategori_in" id="kategori_in" data-mini="true" data-inline="true">
+                  <option value="kecelakaan">kecelakaan</option>
+                  <option value="kriminal">kriminal</option>
+                  <option value="bencana alam">bencana alam</option>
+              </select>
+              <label for="keterangan_in">Keterangan:</label>
+              <textarea cols="40" rows="8" name="keterangan_in" id="keterangan_in"></textarea>
+              <label for="lampiran_in">lampiran: (foto)</label>
+              <input type="file" name="lampiran_in" id="lampiran_in" value="">
+              <label for="nama_in">Nama:</label>
+              <input type="text" name="nama_in" id="nama_in" value="">
+              <label for="nohp_author_in">No Hp:</label>
+              <input type="tel" name="nohp_author_in" id="nohp_author_in" value="">
+              <button type="submit" class="ui-shadow ui-btn ui-corner-all" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div data-role="page" id="Result1">
+        <div data-role="header">
+          <h1>Create Result</h1>
+          <a href="" data-icon="home" class="ui-btn-left" id="btn_home">Home</a>
+        </div>
+        <div role="content" class="ui-content" id="sukses_result">
+          <div class="ui-corner-all custom-corners">
+            <div class="ui-corner-all custom-corners">
+              <div class="ui-bar ui-bar-a">
+                <h3>Sukses</h3>
+              </div>
+              <div class="ui-body ui-body-a">
+                <p>Berhasil membuat laporan</p>
+              </div>
+          </div>
+          </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="Result2">
+        <div data-role="header">
+            <h1>Create Result</h1>
+            <a href="" data-icon="home" class="ui-btn-left" id="btn_home">Home</a>
+        </div>
+        <div role="content" class="ui-content" id="sukses_result">
+          <div class="ui-corner-all custom-corners">
+            <div class="ui-bar ui-bar-a">
+              <h3>Gagal</h3>
+            </div>
+            <div class="ui-body ui-body-a">
+            <p>Gagal membuat laporan</p>
+            </div>
+        </div>
+        </div>
+      </div>
+    <div data-role="page" id="DetailLaporan">
+        <div data-role="header">
+            <h1>Detail Laporan</h1>
+            <a href="" data-icon="home" class="ui-btn-left" id="btn_home">Home</a>
+        </div>
+        <div role="content" class="ui-content" id="detail_laporan">
+
+        </div>
+    </div>
+
+    <script src="scripts/App.js"></script>
+    <script>Application.initApplication();</script>
+</body>
+</html>

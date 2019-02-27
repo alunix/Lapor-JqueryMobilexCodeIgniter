@@ -1,0 +1,9 @@
+#DetailLaporan img{
+  width: 100%;
+}
+
+@media(max-width:452px){
+  label.fontku{
+    font-size:12px;
+  }
+}
